@@ -1,0 +1,202 @@
+
+body {
+  width: 100%;
+  min-height: 594px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+  background: url("./img/main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body button[type='submit']:hover {
+  cursor: pointer;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1 {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 100%;
+  color: #6C8474;
+  padding-bottom: 96px;
+}
+
+.button {
+  position: relative;
+
+  display: block;
+  width: 332px;
+  height: 86px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: #F3F3F3;
+  background-color: #6C8474;
+  border: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.28);
+  border-radius: 54.5px;
+}
+
+.columns-container {
+  display: flex;
+  justify-content: center;
+}
+
+.columns-container .left-column {
+  width: 671px;
+  margin-top: 152px;
+  text-align: center;
+}
+
+.columns-container .right-column {
+  width: 480px;
+  margin-top: 122px;
+  margin-left: 147px;
+}
+
+.popup-wrapper {
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 594px;
+
+  background-color: rgba(255, 255, 255, 0.53);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.popup-wrapper .form-wrapper {
+  width: calc(759px - 79px - 79px);
+  height: calc(520px - 70px - 90px);
+  background-color: white;
+  border-radius: 19px;
+
+  padding: 70px 79px 90px;
+}
+
+.popup-wrapper .form-wrapper h3 {
+  font-size: 28px;
+  text-align: center;
+  margin: 0 0 68px;
+}
+
+.form-wrapper > form {
+  width: 100%;
+  height: calc(100% - 68px - 20px);
+}
+
+.form-wrapper > form > input:not([type='submit']) {
+  appearance: none;
+  display: block;
+  width: calc(601px - 1px - 1px - 23px - 23px);
+  height: calc(54px - 1px - 1px);
+  border: 1px solid #c4c4c4;
+  border-radius: 15px;
+
+  background-color: #f9f9f9;
+  padding: 0 23px;
+  margin: 44px 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: none;
+  color: #787878;
+}
+
+.form-wrapper > form > button[type='submit'] {
+  display: block;
+  width: 227px;
+  height: 58px;
+  margin: 62px auto 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: #F3F3F3;
+  background-color: #6C8474;
+  border: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.28);
+  border-radius: 54.5px;
+}
+
+.form-wrapper > form::after {
+  content: "";
+  display: block;
+  position: relative;
+  text-align: center;
+
+  border-radius: 15px;
+  padding: 10px 0;
+}
+
+.form-wrapper > form.success-text::after {
+  content: "Форма успешно отправлена";
+  color: green;
+}
+
+.form-wrapper > form.error-text::after {
+  content: "Ошибка при отправке формы";
+  color: red;
+}
+
+.form-wrapper > form.invalid-text::after {
+  content: "Невалидные данные";
+  color: red;
+}
+
+.visible-animation {
+  animation: make-visible;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* .unvisible-animation {
+  animation: make-unvisible;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+} */
+
+@keyframes make-visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* @keyframes make-unvisible {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
